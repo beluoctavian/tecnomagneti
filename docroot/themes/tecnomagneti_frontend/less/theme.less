@@ -1,16 +1,19 @@
 @background-color: #f0f2f3;
 @text-color: #34404e;
-@yellow: #ffcc00;
+@yellow: #ecc200;
 @green: #188923;
 
 body {
   background-color: @background-color;
   color: @text-color;
   font-family: 'Roboto Condensed', sans-serif;
-  font-weight: 300;
+  font-weight: 400;
 }
 a {
   color: @yellow;
+  &:hover {
+    color: darken(@yellow, 10%);
+  }
 }
 .region-top-bar {
   h1 {
