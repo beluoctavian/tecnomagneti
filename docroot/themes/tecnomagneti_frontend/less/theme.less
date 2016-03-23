@@ -8,11 +8,41 @@ body {
   color: @text-color;
   font-family: 'Roboto Condensed', sans-serif;
   font-weight: 400;
+  margin-top: 0;
 }
 a {
   color: @yellow;
   &:hover {
     color: darken(@yellow, 10%);
+  }
+}
+header#page-header {
+  height: 100px;
+  line-height: 100px;
+  a {
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  a.logo {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  a.navbar-brand {
+    display: block;
+    height: 50px;
+    line-height: 50px;
+    margin: 25px 10px;
+    padding: 0;
+    font-size: 32px;
+    &:hover {
+      color: @yellow;
+    }
+  }
+  @media screen and (max-width: @screen-sm) {
+    .tecnomagnete-links {
+      display: none;
+    }
   }
 }
 .region-top-bar {

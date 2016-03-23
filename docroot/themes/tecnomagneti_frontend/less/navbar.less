@@ -1,3 +1,23 @@
+#navbar {
+  &.affix {
+    top: 0;
+    z-index:10;
+    @media screen and (max-width: @screen-sm) {
+      left: 15px;
+      right: 15px;
+      width: auto;
+    }
+    @media screen and (min-width: @screen-sm) {
+      width: 720px;
+    }
+    @media screen and (min-width: @screen-md) {
+      width: 940px;
+    }
+    @media screen and (min-width: @screen-lg) {
+      width: 1140px;
+    }
+  }
+}
 @media screen and (min-width: @screen-sm) {
   #navbar {
     padding-left: 0;
@@ -28,7 +48,6 @@
     }
   }
 }
-
 .tabs {
   margin-top: 20px;
 }

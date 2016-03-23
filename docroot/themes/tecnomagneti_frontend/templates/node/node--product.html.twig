@@ -85,12 +85,14 @@
 
   {% if page %}
     <div{{ content_attributes.addClass('content') }}>
-      <div class="description">
-        {{ content.field_image[0] }}
-        {{ content.body[0] }}
-      </div>
-      <div class="files">
-        {{ content.field_files }}
+      <div class="row">
+        <div class="files col-xs-12">
+          {{ content.field_files }}
+        </div>
+        <div class="description col-xs-12">
+          {{ content.field_image[0] }}
+          {{ content.body[0] }}
+        </div>
       </div>
     </div>
   {% else %}

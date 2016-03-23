@@ -66,11 +66,32 @@
 {# Header #}
 {% if page.header %}
   {% block header %}
-    <header class="{{ container }}" role="banner">
+    <header class="{{ container }}" id="page-header" role="banner">
       <div class="row">
-            <div class="col-sm-12">
-              {{ page.header }}
+          <div class="col-sm-12">
+            {{ page.header }}
+            <div class="pull-right tecnomagnete-links">
+              <span>Tecnomagnete.com</span>
+              <a href="http://www.tecnomagnete.com/Eng/ENGhome.htm" target="_blank">
+                <img src="{{ base_path ~ directory }}/assets/flags/flags_iso/24/gb.png">
+              </a>
+              <a href="http://www.tecnomagnete.com/ita/Itahome.htm" target="_blank">
+                <img src="{{ base_path ~ directory }}/assets/flags/flags_iso/24/it.png">
+              </a>
+              <a href="http://www.tecnomagnete.com/deu/deuhome.htm" target="_blank">
+                <img src="{{ base_path ~ directory }}/assets/flags/flags_iso/24/de.png">
+              </a>
+              <a href="http://www.tecnomagnete.com/port/porthome.htm" target="_blank">
+                <img src="{{ base_path ~ directory }}/assets/flags/flags_iso/24/pt.png">
+              </a>
+              <a href="http://www.tecnomagnete.com/chi/chihome.htm" target="_blank">
+                <img src="{{ base_path ~ directory }}/assets/flags/flags_iso/24/cn.png">
+              </a>
+              <a href="http://www.tecnomagnete.com/jap/japhome.htm" target="_blank">
+                <img src="{{ base_path ~ directory }}/assets/flags/flags_iso/24/jp.png">
+              </a>
             </div>
+          </div>
       </div>
     </header>
   {% endblock %}
@@ -83,29 +104,31 @@
       set navbar_classes = [
         'navbar',
         theme.settings.navbar_inverse ? 'navbar-inverse' : 'navbar-default',
-        theme.settings.navbar_position ? 'navbar-' ~ theme.settings.navbar_position|clean_class : container,
+        'affix'
       ]
     %}
-    <div{{ navbar_attributes.addClass(navbar_classes) }} id="navbar">
-      <div class="navbar-header">
-        {{ page.navigation }}
-        {# .btn-navbar is used as the toggle for collapsed navbar content #}
+    <div class="{{ container }}">
+      <div{{ navbar_attributes.addClass(navbar_classes) }} id="navbar">
+        <div class="navbar-header">
+          {{ page.navigation }}
+          {# .btn-navbar is used as the toggle for collapsed navbar content #}
+          {% if page.navigation_collapsible %}
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">{{ 'Toggle navigation'|t }}</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          {% endif %}
+        </div>
+
+        {# Navigation (collapsible) #}
         {% if page.navigation_collapsible %}
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">{{ 'Toggle navigation'|t }}</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
+          <div class="navbar-collapse collapse">
+            {{ page.navigation_collapsible }}
+          </div>
         {% endif %}
       </div>
-
-      {# Navigation (collapsible) #}
-      {% if page.navigation_collapsible %}
-        <div class="navbar-collapse collapse">
-          {{ page.navigation_collapsible }}
-        </div>
-      {% endif %}
     </div>
   {% endblock %}
 {% endif %}
