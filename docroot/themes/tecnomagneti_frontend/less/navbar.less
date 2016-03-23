@@ -3,6 +3,7 @@
     padding-left: 0;
     padding-right: 0;
     margin-bottom: 0;
+    border: none;
     .navbar-collapse {
       padding-left: 0;
       padding-right: 0;
@@ -14,9 +15,15 @@
       li {
         a {
           color: #bebebe;
+          font-size: 16px;
+          font-weight: 400;
           &:hover {
             color: #ffffff;
           }
+        }
+        a.is-active {
+          background-color: @yellow;
+          color: #ffffff;
         }
       }
     }
