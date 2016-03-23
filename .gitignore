@@ -12,7 +12,7 @@ docroot/MAINTAINERS.txt
 docroot/README.txt
 docroot/UPGRADE.txt
 docroot/web.config
-
+docs
 
 # Ignore configuration files that may contain sensitive information.
 docroot/sites/*/settings.local.php
