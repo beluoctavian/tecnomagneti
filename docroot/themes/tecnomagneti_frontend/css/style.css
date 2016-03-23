@@ -1,8 +1,14 @@
-html {
-    height: 100%;
-}
-
 body {
-    min-height: 100%;
-    background-color: #f0f2f3;
+  background-color: #f0f2f3;
+}
+@media screen and (min-width: 768px) {
+  #navbar {
+    padding: 0;
+  }
+  #navbar .navbar-collapse {
+    padding: 0;
+  }
+  #navbar .navbar-right {
+    margin-right: 0;
+  }
 }

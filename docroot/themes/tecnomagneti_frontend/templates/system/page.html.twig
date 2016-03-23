@@ -63,18 +63,18 @@
 #}
 {% set container = theme.settings.fluid_container ? 'container-fluid' : 'container' %}
 
-  <div class="{{ container }}">
-    <div class="row">
-      {# Header #}
-      {% if page.header %}
-        {% block header %}
-          <div class="col-sm-12">
-            {{ page.header }}
-          </div>
-        {% endblock %}
-      {% endif %}
-    </div>
-  </div>
+{# Header #}
+{% if page.header %}
+  {% block header %}
+    <header class="{{ container }}" role="banner">
+      <div class="row">
+            <div class="col-sm-12">
+              {{ page.header }}
+            </div>
+      </div>
+    </header>
+  {% endblock %}
+{% endif %}
 
 {# Navbar #}
 {% if page.navigation or page.navigation_collapsible %}
@@ -86,7 +86,7 @@
         theme.settings.navbar_position ? 'navbar-' ~ theme.settings.navbar_position|clean_class : container,
       ]
     %}
-    <header{{ navbar_attributes.addClass(navbar_classes) }} id="navbar" role="banner">
+    <div{{ navbar_attributes.addClass(navbar_classes) }} id="navbar">
       <div class="navbar-header">
         {{ page.navigation }}
         {# .btn-navbar is used as the toggle for collapsed navbar content #}
@@ -106,7 +106,7 @@
           {{ page.navigation_collapsible }}
         </div>
       {% endif %}
-    </header>
+    </div>
   {% endblock %}
 {% endif %}
 
