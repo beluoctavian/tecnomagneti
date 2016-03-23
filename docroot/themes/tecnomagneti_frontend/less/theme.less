@@ -15,6 +15,27 @@ a {
   &:hover {
     color: darken(@yellow, 10%);
   }
+  &:focus {
+    color: darken(@yellow, 10%);
+  }
+}
+input, textarea {
+  &:focus {
+    border-color: darken(@yellow, 3%) !important;;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px @yellow !important;
+  }
+}
+.btn-primary {
+  background-color: @yellow;
+  border-color: darken(@yellow, 6%);
+  &:hover {
+    background-color: darken(@yellow, 3%);
+    border-color: darken(@yellow, 6%);
+  }
+  &:focus {
+    background-color: darken(@yellow, 3%);
+    border-color: darken(@yellow, 6%);
+  }
 }
 header#page-header {
   height: 100px;
@@ -39,8 +60,11 @@ header#page-header {
       color: @yellow;
     }
   }
-  @media screen and (max-width: @screen-sm) {
-    .tecnomagnete-links {
+  .tecnomagnete-links {
+    a {
+      margin-left: 3px;
+    }
+    @media screen and (max-width: @screen-sm) {
       display: none;
     }
   }
@@ -65,11 +89,48 @@ header#page-header {
     margin-bottom: 0;
   }
 }
+.white-background-with-border {
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  padding: 20px;
+  margin-bottom: 20px;
+}
 .content-wrapper {
   margin-top: 20px;
   .region-content {
-    background-color: #ffffff;
-    border: 1px solid #cccccc;
-    padding: 20px;
+    .white-background-with-border();
+  }
+  .region-sidebar-first, .region-sidebar-second {
+    h2 {
+      font-size: 24px;
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+    #block-views-block-product-types-block-1, #block-views-block-services-block-1 {
+      .white-background-with-border();
+      ul {
+        list-style-type: none;
+        padding-left: 0;
+        li {
+          margin-bottom: 10px;
+          padding-bottom: 10px;
+          border-bottom: 1px dotted #999999;
+          a {
+            &:hover {
+              text-decoration: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+#search-form {
+  button.form-submit {
+    background-color: @yellow;
+    border-color: darken(@yellow, 6%);
+    &:hover {
+      background-color: darken(@yellow, 3%);
+    }
   }
 }
