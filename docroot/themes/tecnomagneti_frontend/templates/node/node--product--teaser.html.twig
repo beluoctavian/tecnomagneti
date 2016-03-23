@@ -83,8 +83,13 @@
     <h2{{ title_attributes }}>
       <a href="{{ url }}" rel="bookmark">{{ label }}</a>
     </h2>
-    {{ content.body }}
-    {{ content.field_files }}
+    <div class="description">
+      {{ content.body }}
+    </div>
+    <div class="files">
+      {{ kint(content.field_files[0]['#description']) }}
+      {{ content.field_files }}
+    </div>
   </div>
 
 </article>
