@@ -7,10 +7,10 @@
       right: 15px;
       width: auto;
     }
-    @media screen and (min-width: @screen-sm) {
+    @media screen and (min-width: @screen-sm) and (max-width: @screen-md) {
       width: 720px;
     }
-    @media screen and (min-width: @screen-md) {
+    @media screen and (min-width: @screen-md) and (max-width: @screen-lg) {
       width: 940px;
     }
     @media screen and (min-width: @screen-lg) {
@@ -33,34 +33,60 @@
     }
   }
   #block-tecnomagneti-frontend-search {
-    width: 300px;
-    float: right;
+    @media screen and (max-width: @screen-sm) {
+      width: 100%;
+      margin: 0 -7.5px 7.25px -7.5px;
+      float: left;
+    }
+    @media screen and (min-width: @screen-sm) {
+      float: right;
+      width: 300px;
+    }
     form {
       .form-group {
         margin-bottom: 0;
       }
-      input {
-        height: 50px;
-        width: 85px;
-        float: right;
-        border: none;
-        background: rgba(0, 0, 0, 0.5);
-        color: #ffffff;
-        -webkit-transition: width 0.4s;
-        -o-transition: width 0.4s;
-        transition: width 0.4s;
-        &:focus, &:hover {
-          box-shadow: none !important;
-          width: 250px;
+      .input-group {
+        @media screen and (max-width: @screen-sm) {
+          width: 100%;
+        }
+        input {
+          height: 50px;
+          border: none;
+          background: rgba(0, 0, 0, 0.5);
+          color: #ffffff;
+          padding: 5px;
+          @media screen and (max-width: @screen-sm) {
+            width: 80%;
+            float: left;
+          }
+          @media screen and (min-width: @screen-sm) {
+            width: 85px;
+            -webkit-transition: width 0.4s;
+            -o-transition: width 0.4s;
+            transition: width 0.4s;
+            float: right;
+            &:focus, &:hover {
+              width: 250px;
+            }
+          }
+          &:focus, &:hover {
+            box-shadow: none !important;
+          }
         }
       }
-      .btn {
-        border: none;
-        height: 50px;
-        width: 50px;
-        box-sizing: border-box;
-        margin-left: 0;
-        padding: 17px 18px;
+      .input-group-btn {
+        @media screen and (max-width: @screen-sm) {
+          float: left;
+        }
+        .btn {
+          border: none;
+          height: 50px;
+          width: 50px;
+          box-sizing: border-box;
+          margin-left: 0;
+          padding: 17px 18px;
+        }
       }
     }
   }
