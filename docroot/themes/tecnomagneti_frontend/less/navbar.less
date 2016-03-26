@@ -17,8 +17,6 @@
       width: 1140px;
     }
   }
-}
-#navbar {
   .navbar-nav {
     li {
       a {
@@ -31,6 +29,38 @@
       a.is-active {
         background-color: @yellow;
         color: #ffffff;
+      }
+    }
+  }
+  #block-tecnomagneti-frontend-search {
+    width: 300px;
+    float: right;
+    form {
+      .form-group {
+        margin-bottom: 0;
+      }
+      input {
+        height: 50px;
+        width: 85px;
+        float: right;
+        border: none;
+        background: rgba(0, 0, 0, 0.5);
+        color: #ffffff;
+        -webkit-transition: width 0.4s;
+        -o-transition: width 0.4s;
+        transition: width 0.4s;
+        &:focus {
+          box-shadow: none !important;
+          width: 250px;
+        }
+      }
+      .btn {
+        border: none;
+        height: 50px;
+        width: 50px;
+        box-sizing: border-box;
+        margin-left: 0;
+        padding: 18px 18px;
       }
     }
   }
