@@ -1,4 +1,18 @@
-.view-products.view-display-id-page_1 {
+.files_style {
+  .file {
+    display: inline-block;
+    float: left;
+    margin-right: 5px;
+    width: auto;
+    .file-icon, .file-link, .file-size {
+      border: none;
+      display: block;
+      text-align: center;
+      padding: 0;
+    }
+  }
+}
+.view {
   .product {
     .cover-image {
       height: 200px;
@@ -21,6 +35,9 @@
     }
     .description {
     }
+    .files {
+      .files_style();
+    }
   }
 }
 
@@ -31,5 +48,8 @@
       margin-right: 20px;
       margin-bottom: 20px;
     }
+  }
+  .files {
+    .files_style();
   }
 }

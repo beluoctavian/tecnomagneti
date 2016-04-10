@@ -1,7 +1,12 @@
 <?php
-/**
- * @file
- * Bootstrap sub-theme.
- *
- * Place your custom PHP code in this file.
- */
+
+function tecnomagneti_frontend_preprocess_file_link(&$variables) {
+  if (!empty($country = $variables['description']))  {
+    $flag_path = drupal_get_path('theme', 'tecnomagneti_frontend') . '/assets/flags/flags_iso/32/' . $country . '.png';
+    if (file_exists($flag_path)) {
+      $variables['icon']['#tag'] = 'img';
+      $variables['icon']['#attributes']['class'] = ['flag', $country];
+      $variables['icon']['#attributes']['src'] = ['/' . $flag_path];
+    }
+  }
+}

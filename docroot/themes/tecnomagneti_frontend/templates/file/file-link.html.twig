@@ -14,26 +14,11 @@
  */
 #}
 {% spaceless %}
-  {%
-    set classes = [
-      icon_only ? 'icon-only',
-      not icon_only ? 'icon-' ~ icon_position|clean_class
-    ]
-  %}
   <span{{ attributes.addClass(classes) }}>
-    {% if icon_only %}
-      dada
-      <span class="file-icon">{{ icon }}</span>
-      <span class="sr-only">
-        <span class="file-link">{{ link }}</span>
-        <span class="file-size">{{ file_size }}</span>
-      </span>
-    {% else %}
-      {% if icon_position == 'after' %}
-        <span class="file-link">{{ link }}</span><span class="file-size">{{ file_size }}</span><span class="file-icon">{{ icon }}</span>
-      {% else %}
-        <span class="file-icon">{{ icon }}</span><span class="file-link">{{ link }}</span><span class="file-size">{{ file_size }}</span>
-      {% endif %}
-    {% endif %}
+    <span class="file-icon">
+      <a href="{{ link.getUrl() }}" target="_blank">{{ icon }}</a>
+    </span>
+    {#<span class="file-link">{{ link }}</span>#}
+    {#<span class="file-size">{{ file_size }}</span>#}
   </span>
 {% endspaceless %}
