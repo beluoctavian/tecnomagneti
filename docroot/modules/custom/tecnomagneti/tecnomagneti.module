@@ -1,1 +1,12 @@
 <?php
+
+/**
+ * Implements hook_form_alter().
+ */
+function tecnomagneti_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  if ($form['#form_id'] == 'search_block_form') {
+    if (!empty($keys = $_GET['keys'])) {
+      $form['keys']['#default_value'] = $keys;
+    }
+  }
+}
