@@ -1,0 +1,4 @@
+name: Tecnomagneti module
+type: module
+description: Custom things for this project
+core: 8.x
