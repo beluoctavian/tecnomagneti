@@ -12,16 +12,20 @@
     }
   }
 }
+.grp-title {
+  margin-left: -20px;
+  background-color: @green;
+  display: inline-block;
+  color: #ffffff;
+  padding: 5px;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
 .view-products, .view-taxonomy-term {
   .views-grouping {
     margin-bottom: 10px;
     .views-grouping-title {
-      margin-left: -20px;
-      background-color: @green;
-      display: inline-block;
-      color: #ffffff;
-      padding: 5px;
-      font-size: 20px;
+      .grp-title();
     }
     h3 {
       color: #000000;
@@ -44,12 +48,7 @@
 
 .view-taxonomy-term {
   h3 {
-    margin-left: -20px;
-    background-color: @green;
-    display: inline-block;
-    color: #ffffff;
-    padding: 5px;
-    font-size: 20px;
+    .grp-title();
   }
 }
 .page-node-type-product {
