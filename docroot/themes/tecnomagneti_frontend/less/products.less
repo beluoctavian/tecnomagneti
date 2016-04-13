@@ -13,31 +13,27 @@
   }
 }
 .view {
-  .product {
-    .cover-image {
-      height: 200px;
-      overflow: hidden;
-      img {
-        min-width: 100%;
-        min-height: 100%;
+  .cover-image {
+    height: 200px;
+    overflow: hidden;
+    img {
+      min-width: 100%;
+      min-height: 100%;
+    }
+  }
+  .views-field-title {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    a {
+      color: @text-color;
+      font-size: 20px;
+      &:hover {
+        text-decoration: none;
       }
     }
-    h2 {
-      margin-top: 10px;
-      margin-bottom: 5px;
-      a {
-        color: @text-color;
-        font-size: 20px;
-        &:hover {
-          text-decoration: none;
-        }
-      }
-    }
-    .description {
-    }
-    .files {
-      .files_style();
-    }
+  }
+  .files {
+    .files_style();
   }
 }
 
