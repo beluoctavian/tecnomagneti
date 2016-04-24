@@ -9,7 +9,7 @@ _core:
 id: tecnomagneti_frontend_local_tasks
 theme: tecnomagneti_frontend
 region: top_bar
-weight: -7
+weight: -6
 provider: null
 plugin: local_tasks_block
 settings:

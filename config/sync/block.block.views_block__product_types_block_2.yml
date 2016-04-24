@@ -12,7 +12,7 @@ dependencies:
 id: views_block__product_types_block_2
 theme: tecnomagneti_frontend
 region: top_bar
-weight: -5
+weight: -4
 provider: null
 plugin: 'views_block:product_types-block_2'
 settings:

@@ -1,0 +1,24 @@
+uuid: 34853447-d791-47b8-91b9-e51aa6947b4a
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.news
+  module:
+    - views
+  theme:
+    - tecnomagneti_frontend
+id: views_block__news_block_1
+theme: tecnomagneti_frontend
+region: top_bar
+weight: -9
+provider: null
+plugin: 'views_block:news-block_1'
+settings:
+  id: 'views_block:news-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility: {  }
