@@ -21,33 +21,93 @@ class ContactForm extends FormBase {
    * {@inheritdoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
-    $form['name'] = [
-      '#type' => 'textfield',
-      '#title' => t('Nume'),
-      '#required' => TRUE,
-      '#maxlength' => 255,
+    $form['container'] = [
+      '#type' => 'container',
+      '#attributes' => [
+        'class' => [
+          'row'
+        ],
+      ],
     ];
-    $form['mail'] = [
-      '#type' => 'textfield',
-      '#title' => t('E-mail'),
-      '#required' => TRUE,
-      '#maxlength' => 255,
-    ];
-    $form['phone'] = [
-      '#type' => 'textfield',
-      '#title' => t('Telefon'),
-      '#required' => FALSE,
-      '#maxlength' => 255,
-    ];
-    $form['message'] = [
-      '#type' => 'textarea',
-      '#title' => t('Mesaj'),
-      '#required' => TRUE,
+    $form['container']['details'] = [
+      '#type' => 'container',
+      '#attributes' => [
+        'class' => [
+          'col-xs-12',
+          'col-sm-6',
+        ],
+      ],
+      'title' => [
+        '#markup' => '<h3>TECNOMAGNETI S.R.L</h3>',
+      ],
+      'address' => [
+        '#markup' => '<div><span class="glyphicon glyphicon-home"></span> <b>Adresa:</b> Str. Aleea Industriilor nr 5, Buzãu</div>',
+      ],
+      'phone' => [
+        '#markup' => '
+<div>
+  <span class="glyphicon glyphicon-earphone"></span> <b>Telefon:</b>
+  <ul>
+      <li>0724148440  - Mihai Ovidiu Damian</li>
+      <li>0720547586 - Popa Nicolae</li>
+      <li>0741639762 - Lorento Iacob</li>
+      <li>0745110506 - Dumitru Belu</li>
+  </ul>
+</div>',
+      ],
+      'fax' => [
+        '#markup' => '<div><span class="glyphicon glyphicon-print"></span> <b>Tel/Fax:</b> 0338-101321 </div>'
+      ],
+      'mail' => [
+        '#markup' => '
+<div>
+  <span class="glyphicon glyphicon-envelope"></span> <b>E-mail:</b>
+  <ul>
+      <li>office@tecnomagneti.ro </li>
+      <li>mihai.damian@tecnomagneti.ro</li>
+      <li>nicolae.popa@tecnomagneti.ro</li>
+      <li>lorento.iacob@tecnomagneti.ro</li>
+      <li>dan.belu@tecnomagneti.ro</li>
+  </ul>
+</div>'
+      ],
     ];
 
-    $form['submit'] = [
-      '#type' => 'submit',
-      '#value' => t('Trimite mesajul'),
+    $form['container']['form'] = [
+      '#type' => 'container',
+      '#attributes' => [
+        'class' => [
+          'col-xs-12',
+          'col-sm-6',
+        ],
+      ],
+      'name' => [
+        '#type' => 'textfield',
+        '#title' => t('Nume'),
+        '#required' => TRUE,
+        '#maxlength' => 255,
+      ],
+      'mail' => [
+        '#type' => 'textfield',
+        '#title' => t('E-mail'),
+        '#required' => TRUE,
+        '#maxlength' => 255,
+      ],
+      'phone' => [
+        '#type' => 'textfield',
+        '#title' => t('Telefon'),
+        '#required' => FALSE,
+        '#maxlength' => 255,
+      ],
+      'message' => [
+        '#type' => 'textarea',
+        '#title' => t('Mesaj'),
+        '#required' => TRUE,
+      ],
+      'submit' => [
+        '#type' => 'submit',
+        '#value' => t('Trimite mesajul'),
+      ],
     ];
 
     return $form;
