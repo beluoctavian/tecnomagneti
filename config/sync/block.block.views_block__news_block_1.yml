@@ -16,9 +16,9 @@ provider: null
 plugin: 'views_block:news-block_1'
 settings:
   id: 'views_block:news-block_1'
-  label: ''
+  label: 'Ultimele stiri'
   provider: views
-  label_display: '0'
-  views_label: ''
+  label_display: visible
+  views_label: 'Ultimele stiri'
   items_per_page: none
 visibility: {  }

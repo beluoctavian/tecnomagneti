@@ -21,4 +21,5 @@ regions:
   page_bottom: 'Page bottom'
 
 libraries:
+  - 'tecnomagneti_frontend/ticker-plugin'
   - 'tecnomagneti_frontend/global-styling'
