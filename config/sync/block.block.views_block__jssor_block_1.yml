@@ -1,0 +1,30 @@
+uuid: 5e247971-1970-479d-b700-ee32408b1319
+langcode: ro
+status: true
+dependencies:
+  config:
+    - views.view.jssor
+  module:
+    - system
+    - views
+  theme:
+    - tecnomagneti_frontend
+id: views_block__jssor_block_1
+theme: tecnomagneti_frontend
+region: top_bar
+weight: -6
+provider: null
+plugin: 'views_block:jssor-block_1'
+settings:
+  id: 'views_block:jssor-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

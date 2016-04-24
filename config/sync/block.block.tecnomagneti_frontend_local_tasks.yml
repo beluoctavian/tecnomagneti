@@ -1,0 +1,22 @@
+uuid: 7fcdc5bc-809f-477d-a600-b27a16ffb62c
+langcode: en
+status: true
+dependencies:
+  theme:
+    - tecnomagneti_frontend
+_core:
+  default_config_hash: X9I1OB0W3WlWtrK-CNcg6hNWwa8wficanpH8pYnDZDE
+id: tecnomagneti_frontend_local_tasks
+theme: tecnomagneti_frontend
+region: top_bar
+weight: -7
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

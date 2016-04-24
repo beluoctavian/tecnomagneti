@@ -1,0 +1,11 @@
+uuid: 162d839d-0e28-4404-9606-6cbefbebd4fa
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.jssor_slider
+id: node.jssor_slider
+target_entity_type_id: node
+target_bundle: jssor_slider
+default_langcode: site_default
+language_alterable: false

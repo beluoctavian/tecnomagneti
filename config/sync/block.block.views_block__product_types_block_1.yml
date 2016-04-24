@@ -1,0 +1,24 @@
+uuid: 2f8293ff-91cd-4de4-8c00-fe45a8062e49
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.product_types
+  module:
+    - views
+  theme:
+    - tecnomagneti_frontend
+id: views_block__product_types_block_1
+theme: tecnomagneti_frontend
+region: sidebar_first
+weight: -7
+provider: null
+plugin: 'views_block:product_types-block_1'
+settings:
+  id: 'views_block:product_types-block_1'
+  label: Produse
+  provider: views
+  label_display: visible
+  views_label: Produse
+  items_per_page: none
+visibility: {  }

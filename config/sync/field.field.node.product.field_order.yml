@@ -1,0 +1,23 @@
+uuid: dd690ab6-4f4f-4289-8f5d-de2cf982a86d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_order
+    - node.type.product
+id: node.product.field_order
+field_name: field_order
+entity_type: node
+bundle: product
+label: Order
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

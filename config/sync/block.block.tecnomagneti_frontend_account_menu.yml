@@ -1,0 +1,26 @@
+uuid: 1ec8e8f6-300f-418b-9e07-7bba5fbfbc20
+langcode: en
+status: false
+dependencies:
+  config:
+    - system.menu.account
+  module:
+    - system
+  theme:
+    - tecnomagneti_frontend
+_core:
+  default_config_hash: DweBpscQZdG0-fHkSpUzdYucrNH45G_KF7Z82V-oyQM
+id: tecnomagneti_frontend_account_menu
+theme: tecnomagneti_frontend
+region: '-1'
+weight: -4
+provider: null
+plugin: 'system_menu_block:account'
+settings:
+  id: 'system_menu_block:account'
+  label: 'User account menu'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 1
+visibility: {  }

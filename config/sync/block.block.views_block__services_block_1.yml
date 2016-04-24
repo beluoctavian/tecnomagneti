@@ -1,0 +1,24 @@
+uuid: b7142e68-6930-4f8b-8f00-f2fb4c97526c
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.services
+  module:
+    - views
+  theme:
+    - tecnomagneti_frontend
+id: views_block__services_block_1
+theme: tecnomagneti_frontend
+region: sidebar_first
+weight: -6
+provider: null
+plugin: 'views_block:services-block_1'
+settings:
+  id: 'views_block:services-block_1'
+  label: Servicii
+  provider: views
+  label_display: visible
+  views_label: Servicii
+  items_per_page: none
+visibility: {  }

@@ -1,0 +1,22 @@
+uuid: 0a3a2e89-6277-4f1e-9708-8ad8eb7b28d7
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: service_page
+label: 'Service page'
+type: 'canonical_entities:node'
+pattern: '/servicii/[node:title]'
+selection_criteria:
+  b12eadcf-692a-424e-9300-fa27828a73fa:
+    id: node_type
+    bundles:
+      service: service
+    negate: false
+    context_mapping:
+      node: node
+    uuid: b12eadcf-692a-424e-9300-fa27828a73fa
+selection_logic: and
+weight: -5
+relationships: {  }

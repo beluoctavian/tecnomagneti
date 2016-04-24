@@ -1,0 +1,30 @@
+uuid: 315d76eb-c510-487c-8008-8cf54f0f693d
+langcode: en
+status: false
+dependencies:
+  config:
+    - views.view.services
+  module:
+    - system
+    - views
+  theme:
+    - tecnomagneti_frontend
+id: views_block__services_block_2
+theme: tecnomagneti_frontend
+region: '-1'
+weight: -8
+provider: null
+plugin: 'views_block:services-block_2'
+settings:
+  id: 'views_block:services-block_2'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

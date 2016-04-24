@@ -1,0 +1,30 @@
+uuid: abd9ae79-7e60-474f-9f00-b23667dd0678
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.product_types
+  module:
+    - system
+    - views
+  theme:
+    - tecnomagneti_frontend
+id: views_block__product_types_block_2
+theme: tecnomagneti_frontend
+region: top_bar
+weight: -5
+provider: null
+plugin: 'views_block:product_types-block_2'
+settings:
+  id: 'views_block:product_types-block_2'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

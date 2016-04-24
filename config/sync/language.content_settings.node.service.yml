@@ -1,0 +1,16 @@
+uuid: 23d08fba-20cc-40f5-ac00-c1ba1f984c8d
+langcode: ro
+status: true
+dependencies:
+  config:
+    - node.type.service
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: node.service
+target_entity_type_id: node
+target_bundle: service
+default_langcode: ro
+language_alterable: true

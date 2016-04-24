@@ -1,0 +1,22 @@
+uuid: c2c62a30-dfef-4e6d-8400-dc634fdef678
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - tecnomagneti_frontend
+_core:
+  default_config_hash: jQQUUWN2Uxr5qZtc9zcJKBCxpKY8orN1u2HPqYYRQDI
+id: tecnomagneti_frontend_powered
+theme: tecnomagneti_frontend
+region: '-1'
+weight: -8
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  provider: system
+  label_display: '0'
+visibility: {  }

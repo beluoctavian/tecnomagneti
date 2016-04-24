@@ -1,0 +1,17 @@
+uuid: 90136ba7-ce92-44ef-9e00-b8c1416fc33d
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Product
+type: product
+description: 'Use <em>products</em> for what you sell.'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

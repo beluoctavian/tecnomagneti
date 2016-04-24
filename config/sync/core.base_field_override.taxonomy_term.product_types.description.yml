@@ -1,0 +1,20 @@
+uuid: 24991a3a-887f-45ae-9d03-03f25a68bbd9
+langcode: ro
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.product_types
+  module:
+    - text
+id: taxonomy_term.product_types.description
+field_name: description
+entity_type: taxonomy_term
+bundle: product_types
+label: Description
+description: 'A description of the term.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

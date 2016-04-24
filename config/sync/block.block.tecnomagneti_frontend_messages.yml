@@ -1,0 +1,22 @@
+uuid: 93273f0e-c8e1-430f-8000-d06cd9d0ef0a
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - tecnomagneti_frontend
+_core:
+  default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
+id: tecnomagneti_frontend_messages
+theme: tecnomagneti_frontend
+region: highlighted
+weight: -6
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

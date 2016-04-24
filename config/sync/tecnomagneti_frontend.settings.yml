@@ -1,0 +1,33 @@
+favicon:
+  mimetype: image/vnd.microsoft.icon
+  path: 'public://favicon.ico'
+  url: 'http://tecnomagneti.local/sites/default/files/favicon.ico'
+  use_default: false
+schema: '8000'
+cdn_jsdelivr_theme: cosmo
+table_bordered: 1
+table_condensed: 1
+breadcrumb_home: 1
+region_wells:
+  header: ''
+  navigation: ''
+  navigation_collapsible: ''
+  top_bar: ''
+  highlighted: ''
+  help: ''
+  content: ''
+  sidebar_first: ''
+  sidebar_second: ''
+  footer: ''
+tooltip_placement: 'auto bottom'
+logo:
+  path: 'public://logo.png'
+  url: ''
+  use_default: false
+cdn_provider: jsdelivr
+features:
+  comment_user_picture: true
+  comment_user_verification: true
+  favicon: true
+  node_user_picture: true
+langcode: ro
