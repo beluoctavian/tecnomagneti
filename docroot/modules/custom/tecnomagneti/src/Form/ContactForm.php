@@ -123,5 +123,13 @@ class ContactForm extends FormBase {
    * {@inheritdoc}
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
+    $to = 'beluoctavian@gmail.com';
+    $message = \Drupal::service('plugin.manager.mail')->mail('tecnomagneti', 'notice', $to, $langcode, $form_state->getValues(), FALSE);
+    if ($message['result']) {
+      drupal_set_message('Mesajul a fost trimis cu succes!');
+    }
+    else {
+      drupal_set_message('Mesajul nu a putut fi trimis.', 'error');
+    }
   }
 }

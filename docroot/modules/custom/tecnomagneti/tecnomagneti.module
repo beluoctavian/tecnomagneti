@@ -10,3 +10,18 @@ function tecnomagneti_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $f
     }
   }
 }
+
+/**
+ * Implements hook_mail().
+ */
+function tecnomagneti_mail($key, &$message, $params) {
+  switch($key) {
+    case 'notice':
+      $message['subject'] = t('Message from tecnomagneti.ro');
+      $message['body'][] = t("Ati primit un mesaj de pe tecnomagneti.ro\n\n");
+      $message['body'][] = t("Nume: {$params['name']}\n");
+      $message['body'][] = t("E-mail: {$params['mail']}\n");
+      $message['body'][] = t("Mesaj: {$params['message']}\n");
+      break;
+  }
+}
