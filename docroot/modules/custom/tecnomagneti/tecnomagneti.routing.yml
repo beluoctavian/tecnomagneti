@@ -1,0 +1,7 @@
+tecnomagneti_contact_form:
+  path: '/contact'
+  defaults:
+    _form: '\Drupal\tecnomagneti\Form\ContactForm'
+    _title: 'Contacteaza-ne'
+  requirements:
+    _access: 'TRUE'
